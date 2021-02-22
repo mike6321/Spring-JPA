@@ -21,6 +21,23 @@ public class JpaMain {
         transaction.begin();
 
         try {
+            // TODO: 비영속 상태 2021/02/22 9:18 오후
+            Member member = new Member();
+            member.setId(100L);
+            member.setName("HelloJPA");
+
+            // TODO: 영속 2021/02/22 9:18 오후
+            /**
+             * 영속상태가 된다해서 DB에 쿼리가 날아가지 않는다.
+             * commit 상태에서 쿼리가 날라간다.
+             * */
+            System.out.println("*********Before*********");
+            entityManager.persist(member);
+            System.out.println("*********After*********");
+
+
+
+
             // TODO: 테이블 Insert 2021/02/21 7:32 오후
 //            Member member = new Member();
 //            member.setId(1L);
@@ -41,14 +58,14 @@ public class JpaMain {
 //            findMember.setName("junwoo JPA");
 
             // TODO: JPQL 맛보기 2021/02/21 7:33 오후
-            List<Member> resultList = entityManager.createQuery("select m from Member as m", Member.class)
-                    .setMaxResults(5)
-                    .setMaxResults(8)
-                    .getResultList();
-
-            for (Member member : resultList) {
-                System.out.println(member.getName());
-            }
+//            List<Member> resultList = entityManager.createQuery("select m from Member as m", Member.class)
+//                    .setMaxResults(5)
+//                    .setMaxResults(8)
+//                    .getResultList();
+//
+//            for (Member member : resultList) {
+//                System.out.println(member.getName());
+//            }
 
 
 
