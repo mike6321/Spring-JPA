@@ -35,7 +35,10 @@ public class JpaMain {
             entityManager.persist(member);
             System.out.println("*********After*********");
 
+            Member findMember = entityManager.find(Member.class, 101L);
 
+            System.out.println("findMember id = " + findMember.getId());
+            System.out.println("findMember name = " + findMember.getName());
 
 
             // TODO: 테이블 Insert 2021/02/21 7:32 오후
