@@ -97,7 +97,7 @@ public class JpaMain {
              * JPA는 값을 Commit하는 시점에 반영된다.
              * persit를 안쓰는 것이 맞다.
              * */
-            // TODO: persist를 안쓰는 이유에 대해서 조금 더 구체적으로 알아보기 2021/03/05 12:39 오후
+            // TODO: persist를 안쓰는 이유에 대해서 조금 더 구체적으로 알아보기 2021/03/05 12:40 오후
             Member member = entityManager.find(Member.class, 150L);
             member.setName("Hello Kakao");
 
