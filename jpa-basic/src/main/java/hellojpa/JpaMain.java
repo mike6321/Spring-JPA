@@ -33,19 +33,18 @@ public class JpaMain {
              * */
 //            System.out.println("*********Before*********");
 //            entityManager.persist(member);
-//            entityManager.detach(member);
 //            System.out.println("*********After*********");
-
+//
 //            Member findMember1 = entityManager.find(Member.class, 101L);
 //            Member findMember2 = entityManager.find(Member.class, 101L);
 //
 //            System.out.println(findMember1 == findMember2);
-//
+
 //            System.out.println("findMember id = " + findMember1.getId());
 //            System.out.println("findMember name = " + findMember1.getName());
-//
 //            System.out.println("findMember id = " + findMember2.getId());
 //            System.out.println("findMember name = " + findMember2.getName());
+//
 
 
             // TODO: 테이블 Insert 2021/02/21 7:32 오후
@@ -83,29 +82,30 @@ public class JpaMain {
              * 왜 굳이 이렇게 할까?
              * 최적화 할 수 있는 여지를 남기기 위해!
              */
-//            Member member1 = new Member(150L, "A");
-//            Member member2 = new Member(160L, "A");
+//            Member member1 = new Member(200L, "A");
+//            Member member2 = new Member(201L, "A");
 //
 //            entityManager.persist(member1);
 //            entityManager.persist(member2);
-
+//
 //            System.out.println("*********");
 
-            
             // TODO: diryChecking 2021/03/05 12:29 오후
             /**
              * JPA는 값을 Commit하는 시점에 반영된다.
              * persit를 안쓰는 것이 맞다.
              * */
-            // TODO: persist를 안쓰는 이유에 대해서 조금 더 구체적으로 알아보기 2021/03/05 12:40 오후
-            Member member = entityManager.find(Member.class, 150L);
-            member.setName("Hello Kakao");
+            // TODO: persist를 안쓰는 이유에 대해서 조금 더 구체적으로 알아보기
 
+            //  2021/03/05 12:40 오후
+            Member member = entityManager.find(Member.class, 201L);
+            member.setName("Hello junwoo");
+
+            transaction.commit();
 //            if (member.getName().equals("Hello Kakao")) {
 //                entityManager.persist(member);
 //            }
 
-            transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
         } finally {
@@ -121,3 +121,4 @@ public class JpaMain {
  *     primary key(id)
  * )
  * */
+
