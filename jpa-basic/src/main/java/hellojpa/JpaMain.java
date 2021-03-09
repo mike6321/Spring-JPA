@@ -102,11 +102,17 @@ public class JpaMain {
 //            member.setName("Hello junwoo");
 
             // TODO: flush 2021/03/10 1:09 오전
-            Member member = new Member(200l, "Member200");
-            entityManager.persist(member);
+//            Member member = new Member(200l, "Member200");
+//            entityManager.persist(member);
+//
+//            entityManager.flush();
+//            System.out.println("*********");
 
-            entityManager.flush();
-            System.out.println("*********");
+            // TODO: 준영속 상태 2021/03/10 1:10 오전
+            Member member = entityManager.find(Member.class, 201L); // 현재는 영속상태
+            member.setName("jun young sok");
+
+            entityManager.detach(member);
 
             transaction.commit();
 //            if (member.getName().equals("Hello Kakao")) {
