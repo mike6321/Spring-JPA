@@ -98,8 +98,15 @@ public class JpaMain {
             // TODO: persist를 안쓰는 이유에 대해서 조금 더 구체적으로 알아보기
 
             //  2021/03/05 12:40 오후
-            Member member = entityManager.find(Member.class, 201L);
-            member.setName("Hello junwoo");
+//            Member member = entityManager.find(Member.class, 201L);
+//            member.setName("Hello junwoo");
+
+            // TODO: flush 2021/03/10 1:09 오전
+            Member member = new Member(200l, "Member200");
+            entityManager.persist(member);
+
+            entityManager.flush();
+            System.out.println("*********");
 
             transaction.commit();
 //            if (member.getName().equals("Hello Kakao")) {
