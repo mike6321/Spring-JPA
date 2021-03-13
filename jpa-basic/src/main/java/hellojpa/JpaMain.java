@@ -115,9 +115,7 @@ public class JpaMain {
             entityManager.detach(member);
 
             transaction.commit();
-//            if (member.getName().equals("Hello Kakao")) {
-//                entityManager.persist(member);
-//            }
+
 
         } catch (Exception exception) {
             transaction.rollback();
