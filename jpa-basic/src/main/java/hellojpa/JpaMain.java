@@ -115,14 +115,39 @@ public class JpaMain {
 //            entityManager.detach(member);
 
 
-            Member member = new Member();
-            member.setId(3L);
-            member.setRoleType(RoleType.ADMIN);
+//            Member member = new Member();
+////            member.setId("ID_A");
+//            member.setUsername("Junwoo");
+//
+//            entityManager.persist(member);
+//
+//            transaction.commit();
+            // TODO: 이전과는 달리 commit 시점이 아닌 persist 시점에 쿼리를 내보낸다 2021/03/14 5:02 오후
+            /**
+             * 모아서 쿼리를 처리하면 기존의 시퀀스 값을 알 수 없기 때문이다.
+             * call next value for MEMBER_SEQ
+             * */
+            Member member1 = new Member();
+            member1.setUsername("A");
 
-            entityManager.persist(member);
+            Member member2 = new Member();
+            member2.setUsername("B");
+
+            Member member3 = new Member();
+            member3.setUsername("C");
+
+            System.out.println("*********");
+
+            entityManager.persist(member1);
+            entityManager.persist(member2);
+            entityManager.persist(member3);
+
+            System.out.println(member1.getId());
+            System.out.println(member2.getId());
+            System.out.println(member3.getId());
+            System.out.println("*********");
 
             transaction.commit();
-
 
         } catch (Exception exception) {
             transaction.rollback();
