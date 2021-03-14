@@ -1,8 +1,9 @@
 package hellojpa;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * Project : jpa-basic
@@ -14,33 +15,99 @@ import javax.persistence.Id;
 @Entity
 public class Member {
     @Id
-    private long id; //PK
-    @Column(unique = true, length = 10)
-    private String name;
+    private Long id;
+
+    @Column(name = "name")
+    private String username;
+
     private Integer age;
-    private Boolean isIn;
+
+    // TODO: enum 타입이 없는 DB의 경우 (@Enumerated) 2021/03/14 12:14 오후
+    /**
+     * EnumType.String으로 항상 사용하기 (ORDINAL X)
+     * */
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+
+    // TODO: 날짜 타입의 경우 (@Temporal) 2021/03/14 12:14 오후
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createdDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
+
+    private LocalDate testLocalDate;
+    private LocalDateTime testLocalDateTime;
+
+    @Lob
+    private String description;
+
+    @Transient
+    private int temp;
 
     public Member() {
     }
 
-    public Member(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public RoleType getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(RoleType roleType) {
+        this.roleType = roleType;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public Date getLastModifiedDate() {
+        return lastModifiedDate;
+    }
+
+    public void setLastModifiedDate(Date lastModifiedDate) {
+        this.lastModifiedDate = lastModifiedDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public int getTemp() {
+        return temp;
+    }
+
+    public void setTemp(int temp) {
+        this.temp = temp;
     }
 }

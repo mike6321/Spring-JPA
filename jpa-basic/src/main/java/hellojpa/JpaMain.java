@@ -109,10 +109,17 @@ public class JpaMain {
 //            System.out.println("*********");
 
             // TODO: 준영속 상태 2021/03/10 1:10 오전
-            Member member = entityManager.find(Member.class, 201L); // 현재는 영속상태
-            member.setName("jun young sok");
+//            Member member = entityManager.find(Member.class, 201L); // 현재는 영속상태
+//            member.setName("jun young sok");
+//
+//            entityManager.detach(member);
 
-            entityManager.detach(member);
+
+            Member member = new Member();
+            member.setId(3L);
+            member.setRoleType(RoleType.ADMIN);
+
+            entityManager.persist(member);
 
             transaction.commit();
 
