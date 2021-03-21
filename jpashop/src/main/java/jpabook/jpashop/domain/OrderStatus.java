@@ -7,6 +7,6 @@ package jpabook.jpashop.domain;
  * @comment :
  * Time : 2:17 오후
  */
-public enum OrderState {
+public enum OrderStatus {
     ORDER, CANCEL
 }
