@@ -18,11 +18,12 @@ public class Order {
     private Long id;
     @Column(name = "MEMBER_ID")
     private Long memberId;
-    
-    // TODO: 이렇게 참조가 되어야하는것이 아닌가? 2021/03/21 5:35 오후
-    private Member member;
 
     private LocalDateTime orderDate;
+
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus state;

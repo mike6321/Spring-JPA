@@ -25,10 +25,10 @@ import javax.persistence.Persistence;
 
         try {
             Order order = entityManager.find(Order.class, 1L);
-            Member member = order.getMember();
+//            Member member = order.getMember();
 
 //            Long memberId = order.getMemberId();
-//
+
 //            Member member = entityManager.find(Member.class, memberId);
 
 
