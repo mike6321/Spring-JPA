@@ -2,6 +2,7 @@ package jpabook.jpashop;
 
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderItem;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -24,13 +25,9 @@ import javax.persistence.Persistence;
         transaction.begin();
 
         try {
-            Order order = entityManager.find(Order.class, 1L);
-//            Member member = order.getMember();
 
-//            Long memberId = order.getMemberId();
-
-//            Member member = entityManager.find(Member.class, memberId);
-
+            Order order = new Order();
+            order.addOrderItem(new OrderItem());
 
 
             transaction.commit();
