@@ -1,7 +1,17 @@
 
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Ì‡ñÍ…/
-Z	java:S106'"9Replace this use of System.out or System.err by a logger.(Á”ß£úÿÿÿÿ8ò„êÎ…/
-W	java:S125!"<This block of commented-out lines of code should be removed.(½Õ„x8¬¤åÎ…/
-O
-java:S1135"2Complete the task associated to this TODO comment.(¢•‰È8İ÷Î…/
+H
+java:S1481,",Remove this unused "members" local variable.(Íãë8Ó“ì…/
+Z	java:S106-"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¿à”ì…/
+Z	java:S1060"9Replace this use of System.out or System.err by a logger.(ÿâöøÿÿÿÿ8¿à”ì…/
+Z	java:S106/"9Replace this use of System.out or System.err by a logger.(º¼àõøÿÿÿÿ8İá•ì…/
+„
+java:S1192."bDefine a constant instead of duplicating this literal "*********************************" 4 times.(ÿâöøÿÿÿÿ8¿à”ì…/
+]	java:S125"<This block of commented-out lines of code should be removed.(“†úËøÿÿÿÿ8Ëïì…/
+Z	java:S1062"9Replace this use of System.out or System.err by a logger.(ÿâöøÿÿÿÿ8œò®ë…/
+X	java:S125'"<This block of commented-out lines of code should be removed.(ğåÌá8òó¨ê…/
+Z	java:S106."9Replace this use of System.out or System.err by a logger.(ÿâöøÿÿÿÿ8¿à”ì…/
+X	java:S125$"<This block of commented-out lines of code should be removed.(å®Ÿé8Ãş­ë…/
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(ÿâöøÿÿÿÿ8öƒ¯ë…/
+T
+java:S1135"2Complete the task associated to this TODO comment.(—ñÍ¯ûÿÿÿÿ8İ÷Î…/
+]	java:S1253"<This block of commented-out lines of code should be removed.(¥ÓÉÈüÿÿÿÿ8Ó“ì…/
