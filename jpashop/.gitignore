@@ -1,9 +1,0 @@
-# Created by .ignore support plugin (hsz.mobi)
-# ---- Sonar
-.sonar
-
-# ---- IntelliJ IDEA
-*.iws
-*.iml
-*.ipr
-.idea
