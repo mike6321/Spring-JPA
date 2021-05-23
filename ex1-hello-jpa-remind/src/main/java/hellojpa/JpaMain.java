@@ -22,16 +22,15 @@ public class JpaMain {
         tx.begin();
 
         try {
-            // TODO: 플러시 2021/05/23 11:27 오후
-            /**
-             * commit 시점에 쿼리가 나가는 것이 아닌 flush 하는 시점에 쿼리가 나간다.
-             * jpql을 사용하는 시점에 flush가 된다.
-             * */
-            Member member = new Member(200L, "member200");
-            em.persist(member);
+            // TODO: 준 영속 상태 2021/05/23 11:36 오후
+            Member member = em.find(Member.class, 101L);
+            member.setName("aaaa2");
 
-            em.flush();
-            System.out.println("***************************");
+//            em.detach(member);
+            em.clear();
+
+            Member member2 = em.find(Member.class, 101L);
+            member2.setName("aaaa3");
 
             tx.commit();
         } catch (Exception e) {
