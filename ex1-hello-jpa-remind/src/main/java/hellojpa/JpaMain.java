@@ -22,15 +22,12 @@ public class JpaMain {
         tx.begin();
 
         try {
-            // TODO: 준 영속 상태 2021/05/23 11:36 오후
-            Member member = em.find(Member.class, 101L);
-            member.setName("aaaa2");
+            Member member = new Member();
+            member.setId(2L);
+            member.setUsername("B");
+            member.setRoleType(RoleType.USER);
 
-//            em.detach(member);
-            em.clear();
-
-            Member member2 = em.find(Member.class, 101L);
-            member2.setName("aaaa3");
+            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
