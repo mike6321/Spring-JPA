@@ -29,3 +29,5 @@ Spring-JPA 공부를 위한 repository 입니다.
 
 [데이터베이스 스키마 자동 생성](https://www.notion.so/JPA-b11ad7f414414dc3960c4bcb09fff5bf)
 
+[필드와 컬럼 매핑](https://www.notion.so/JPA-75d0b6285de24e57aba309dba2d88e7f)
+
