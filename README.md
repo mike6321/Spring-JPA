@@ -25,6 +25,8 @@ Spring-JPA 공부를 위한 repository 입니다.
 
 [필드와 컬럼 매핑](https://www.notion.so/JPA-75d0b6285de24e57aba309dba2d88e7f)
 
+[기본 키 매핑](https://www.notion.so/JPA-108487c9a80f4adf8e9e40cb973d6ca4)
+
 [단방향 연관관계](https://www.notion.so/JPA-173e9d03a6c9421997a56ddf35e43944)
 
 [양방향 연관관계와 연관관계의 주인1](https://www.notion.so/JPA-1-cd4863462aba4bb4bfe7e48160fb647e)
