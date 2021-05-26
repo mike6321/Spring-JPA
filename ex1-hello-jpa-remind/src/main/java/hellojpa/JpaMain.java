@@ -23,12 +23,11 @@ public class JpaMain {
 
         try {
             Member member = new Member();
-            member.setId(2L);
-            member.setUsername("B");
-            member.setRoleType(RoleType.USER);
-
+//            member.setId("ID_A");
+            member.setUsername("junwoo");
+            System.out.println("***********커밋 이전***********");
             em.persist(member);
-
+            System.out.println("***********커밋 이전***********");
             tx.commit();
         } catch (Exception e) {
             em.close();
