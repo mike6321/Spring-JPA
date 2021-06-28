@@ -30,16 +30,14 @@ public class JpaMain {
 
             Member member = new Member();
             member.setUsername("junwoo");
-            member.changeTeam(team);
             em.persist(member);
 
             team.addMember(member);
 
             Team findTeam = em.find(Team.class, team.getId());
             List<Member> members = findTeam.getMembers();
-            for (Member member1 : members) {
-                System.out.println("member1 = " + member1.getUsername());
-            }
+
+            System.out.println("members.toString() = " + members.toString());
 
             tx.commit();
         } catch (Exception e) {
