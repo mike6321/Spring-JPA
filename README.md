@@ -34,3 +34,10 @@ Spring-JPA 공부를 위한 repository 입니다.
 [양방향 연관관계와 연관관계의 주인2 - 주의점 정리](https://www.notion.so/JPA-2-ee63fb87893544d2a1acf9bcb3e934a6)
 
 [실전 예제2 - 연관관계 매핑 시작](https://www.notion.so/JPA-2-ddb828df30174372b8c5a3dffca48d4c)
+
+
+
+## section03
+
+[다대일 [N:1]](https://www.notion.so/JPA-77991195fa0142ca90ed86144efed655)
+
