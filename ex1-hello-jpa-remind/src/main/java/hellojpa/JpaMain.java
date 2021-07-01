@@ -23,21 +23,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-            //저장
-            Team team = new Team();
-            team.setName("TeamA");
-            em.persist(team);
-
-            Member member = new Member();
-            member.setUsername("junwoo");
-            em.persist(member);
-
-            team.addMember(member);
-
-            Team findTeam = em.find(Team.class, team.getId());
-            List<Member> members = findTeam.getMembers();
-
-            System.out.println("members.toString() = " + members.toString());
 
             tx.commit();
         } catch (Exception e) {
