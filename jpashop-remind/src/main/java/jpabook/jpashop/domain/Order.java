@@ -2,6 +2,8 @@ package jpabook.jpashop.domain;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Project : jpashop-remind
@@ -18,20 +20,25 @@ public class Order {
     @Column(name = "ORDER_ID")
     private Long id;
 
-//    @Column(name = "MEMBER_ID")
-//    private Long memberId;
+    @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
 
-    // TODO: memberId 2021/05/31 10:30 오후
-    /**
-     * id로 참조하는 것이 객체로 참조하는 것이 바람직하다. (객체지향스럽다.)
-     * */
-    @Column(name = "MEMBER_ID")
-    private Member memberId;
+    @OneToMany(mappedBy = "order")
+    private List<OrderItem> orderItems = new ArrayList<>();
 
     private LocalDateTime orderDate;
 
     @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
+
+    public Member getMember() {
+        return member;
+    }
+
+    public void setMember(Member member) {
+        this.member = member;
+    }
 
     public Long getId() {
         return id;
@@ -40,14 +47,6 @@ public class Order {
     public void setId(Long id) {
         this.id = id;
     }
-
-//    public Long getMemberId() {
-//        return memberId;
-//    }
-//
-//    public void setMemberId(Long memberId) {
-//        this.memberId = memberId;
-//    }
 
     public LocalDateTime getOrderDate() {
         return orderDate;
@@ -65,4 +64,8 @@ public class Order {
         this.orderStatus = orderStatus;
     }
 
+    public void addOrderItem(OrderItem orderItem) {
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
 }
