@@ -1,6 +1,8 @@
 package hellojpa;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Project : ex1-hello-jpa-remind
@@ -19,6 +21,9 @@ public class Team {
     @Column(name = "TEAMNAME")
     private String name;
 
+    @OneToMany(mappedBy = "team")
+    private List<Member> members = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
@@ -34,4 +39,5 @@ public class Team {
     public void setName(String name) {
         this.name = name;
     }
+
 }

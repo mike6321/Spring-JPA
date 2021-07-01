@@ -47,5 +47,4 @@ public class Member {
         this.team = team;
     }
 
-
 }
