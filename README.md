@@ -43,3 +43,4 @@ Spring-JPA 공부를 위한 repository 입니다.
 
 [일대다[1:N]](https://www.notion.so/JPA-a23d1a0e85514e0491b6bba726ed2eee)
 
+[일대일[1:1]](https://www.notion.so/JPA-133bf54d5ea24d58926f6fea25f9c4f2)
