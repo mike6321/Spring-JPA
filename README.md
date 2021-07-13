@@ -46,3 +46,5 @@ Spring-JPA 공부를 위한 repository 입니다.
 [일대일[1:1]](https://www.notion.so/JPA-133bf54d5ea24d58926f6fea25f9c4f2)
 
 [다대다[N:N]](https://www.notion.so/JPA-7930d82e3faf4686a8571e113ba320ac)
+
+[JPA - 실전 예제 3 - 다양한 연관관계 매핑](https://www.notion.so/JPA-3-f3c333a1e0664b9d93d5625d5944d576)
