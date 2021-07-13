@@ -48,3 +48,25 @@ Spring-JPA 공부를 위한 repository 입니다.
 [다대다[N:N]](https://www.notion.so/JPA-7930d82e3faf4686a8571e113ba320ac)
 
 [JPA - 실전 예제 3 - 다양한 연관관계 매핑](https://www.notion.so/JPA-3-f3c333a1e0664b9d93d5625d5944d576)
+
+
+
+## section04
+
+상속관계 매핑
+
+Mapped Superclass - 매핑 정보 상속
+
+실전 예제 4 - 상속관계 매핑
+
+
+
+## section05
+
+프록시
+
+즉시 로딩과 지연 로딩
+
+영속성 전이(CASCADE)와 고아 객체
+
+실전 예제 5 - 연관관계 관리
