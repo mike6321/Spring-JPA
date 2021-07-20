@@ -12,8 +12,7 @@ import java.util.List;
  * Time : 9:25 오후
  */
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Item {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
