@@ -53,7 +53,7 @@ Spring-JPA 공부를 위한 repository 입니다.
 
 ## section04
 
-[상속관계 매핑](https://elderly-yak-238.notion.site/JPA-7-171a2fad27d9471982a0451dc1601ac7)
+[상속관계 매핑](https://www.notion.so/696cb4dbfa49472db2c8dc1888adf929)
 
 Mapped Superclass - 매핑 정보 상속
 
