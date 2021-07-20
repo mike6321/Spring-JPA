@@ -55,7 +55,7 @@ Spring-JPA 공부를 위한 repository 입니다.
 
 [상속관계 매핑](https://www.notion.so/696cb4dbfa49472db2c8dc1888adf929)
 
-Mapped Superclass - 매핑 정보 상속
+[Mapped Superclass - 매핑 정보 상속](https://www.notion.so/Mapped-Superclass-47c87dfbc9dd40d5aeb5caa79e95084a)
 
 실전 예제 4 - 상속관계 매핑
 
