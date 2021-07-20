@@ -11,7 +11,6 @@ import javax.persistence.Entity;
  * Time : 12:26 오전
  */
 @Entity
-@DiscriminatorValue("M")
 public class Movie extends Item {
 
     private String director;
