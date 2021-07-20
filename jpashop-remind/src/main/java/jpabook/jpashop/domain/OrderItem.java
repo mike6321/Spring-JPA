@@ -10,7 +10,7 @@ import javax.persistence.*;
  * Time : 9:24 오후
  */
 @Entity
-public class OrderItem {
+public class OrderItem extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ORDER_ITEM_ID")

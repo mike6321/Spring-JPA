@@ -12,7 +12,7 @@ import java.util.List;
  * Time : 9:24 오후
  */
 @Entity
-public class Member {
+public class Member extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "MEMBER_ID")

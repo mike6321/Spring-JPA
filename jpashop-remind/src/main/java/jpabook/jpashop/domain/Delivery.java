@@ -10,7 +10,7 @@ import javax.persistence.*;
  * Time : 6:18 오후
  */
 @Entity
-public class Delivery {
+public class Delivery extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "DELIVERY_ID")
